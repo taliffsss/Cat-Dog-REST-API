@@ -19,9 +19,10 @@ use App\Http\Controllers\AnimalController;
 
 Route::middleware('api')->group(function () {
     Route::prefix('v1')->controller(AnimalController::class)->group(function () {
-        Route::get('breeds/page/{offset}/limit/{limit}', 'getBreeds');
         // Route param pattern you may see on App\Providers\RouteServiceProvider
-        Route::get('breeds/{base}/page/{offset}/limit/{limit}', 'getBreed');
-        Route::get('images/{base}', 'getImage');
+        Route::get('breeds', 'getBreeds');
+        Route::get('breed/{param}', 'getBreed');
+        Route::get('image/dog/{param}', 'getImageOfDog');
+        Route::get('image/cat/{param}', 'getImageOfCat');
     });
 });

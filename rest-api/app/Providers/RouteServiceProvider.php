@@ -55,6 +55,8 @@ class RouteServiceProvider extends ServiceProvider
         // Matches 'username' parameter in routes to allow lowercase letters, digits, underscores, and dashes with a length of 3 to 16 characters.
         Route::pattern('username', '[a-z0-9_-]{3,16}');
 
+        // Matches strings that consist solely of letters, numbers, underscores, and hyphens from start to finish.
+        Route::pattern('param', '^[\w-]+$');
 
         $this->routes(function () {
             Route::middleware('api')

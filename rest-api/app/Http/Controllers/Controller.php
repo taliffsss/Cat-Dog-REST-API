@@ -17,15 +17,15 @@ class Controller extends BaseController
      */
     protected function success(?string $message, mixed $data, $statusCode = 201, ?int $limit = 0, ?int $page = 0): JsonResponse
     {
-        $payload = array_filter([
-            'result' => [
+        $payload = [
+            'result' => array_filter([
                 'success' => true,
                 'message' => $message,
                 'limit' => $limit,
                 'page' => $page,
                 'data' => $data,
-            ],
-        ]);
+            ]),
+        ];
 
         return response()->json($payload, $statusCode);
     }

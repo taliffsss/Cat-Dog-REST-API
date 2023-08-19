@@ -1,4 +1,6 @@
 
+
+
 ## Cat and Dog Rest API Documentation
 
 ### Introduction
@@ -6,23 +8,22 @@
 This project provides a REST API to fetch Cat and Dog breeds. This documentation covers the available routes, parameters, and some setup instructions.
 
 ### API Endpoints
+Note: By default limit value is 10, [Cat and Dog Postmant Collection](https://documenter.getpostman.com/view/5578104/RWgqUxxh#c6f93ffe-4358-4969-a18e-e1e601791f09) attaching for reference
 
 1.  **Fetch Breeds**:
     
-    -   Endpoint: `/v1/breeds/page/{page}/limit/{limit}`
+    -   Endpoint: `/v1/breeds?page=1`
     -   Parameters:
         -   `page`: (optional) The page number. Default is `0`.
         -   `limit`: (optional) Number of breeds per page. Default is `10`.
 2.  **Fetch Specific Breed**:
     
-    -   Endpoint: `/breeds/{base}/page/{page}/limit/{limit}`
+    -   Endpoint:  `/breed/{breed_id}`
     -   Parameters:
-        -   `base`: The id of the breed.
-        -   `page`: (optional) The page number. Default is `0`.
-        -   `limit`: (optional) Number of breeds per page. Default is `10`.
+        -   `breed_id`: The id of the breed.
 3.  **Fetch Images**:
     
-    -   Endpoint: `/images/{image_id}`
+    -   Endpoint: `/image/{image_id}`
     -   Parameters:
         -   `image_id`: The id of the image to get
 
