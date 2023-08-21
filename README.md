@@ -13,7 +13,6 @@ Note: By default limit value is 10, [Cat and Dog Postmant Collection](https://do
     -   Endpoint: `/v1/breeds?page=1`
     -   Parameters:
         -   `page`: (optional) The page number. Default is `0`.
-        -   `limit`: (optional) Number of breeds per page. Default is `10`.
 2.  **Fetch Specific Breed**:
     
     -   Endpoint:  `/breed/{breed_id}`
